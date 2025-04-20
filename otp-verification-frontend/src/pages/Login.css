@@ -1,0 +1,98 @@
+/* Full Page Centering */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Login Container */
+  .login-container {
+    background-color: #ffffff;
+    padding: 4rem 3.5rem;
+    border-radius: 40px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
+    max-width: 650px;
+    width: 95%;
+    min-height: 500px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .login-container h2 {
+    margin-bottom: 2.5rem;
+    color: #0d47a1;
+    font-size: 2.5rem;
+  }
+  
+  /* Input Wrapper */
+  .login-container form div {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  /* Label */
+  .login-container label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  /* Input */
+  .login-container input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 2px solid #bbdefb;
+    font-size: 1.1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .login-container input:focus {
+    border-color: #2196f3;
+    outline: none;
+  }
+  
+  /* Button */
+  .login-container button {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container button:hover {
+    background-color: #0d47a1;
+  }
+  
+  /* Message Paragraph */
+  .login-container p {
+    margin-top: 1.5rem;
+    color: #444;
+    font-size: 1.05rem;
+  }
+  
+  /* Link */
+  .login-container a {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-container a:hover {
+    text-decoration: underline;
+  }
+  
