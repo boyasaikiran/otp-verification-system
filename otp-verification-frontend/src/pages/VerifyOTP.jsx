@@ -22,7 +22,7 @@ const VerifyOTP = () => {
       setMessageType('success');
 
       // ✅ Redirect to the university website
-      window.location.href = 'https://www.kishkindauniversity.edu.in';
+      window.location.href = 'https://karunya.edu/';
     } catch (error) {
       setMessage(error.response?.data?.message || 'OTP verification failed');
       setMessageType('error');
