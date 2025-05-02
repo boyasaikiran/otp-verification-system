@@ -66,3 +66,93 @@
   </script>
 </body>
 </html>
+######################################################################
+import React, { useState } from 'react';
+
+function App() {
+  const [msg, setMsg] = useState('');
+
+  const login = (e) => {
+    e.preventDefault();
+    const user = e.target.user.value;
+    const pass = e.target.pass.value;
+
+    if (user === 'admin' && pass === '1234') setMsg('Success!');
+    else setMsg('Failed!');
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+     <h2>Welcome App</h2>
+      <form onSubmit={login}>
+        <input name="user" placeholder="User" /><br /><br />
+        <input name="pass" type="password" placeholder="Pass" /><br /><br />
+        <button>Login</button>
+      </form>
+      <p>{msg}</p>v
+    </div>
+  );
+}
+
+export default App;
+###########################################################################
+import React, { useState } from 'react';
+
+function App() {
+  const [name, setName] = useState('');
+  const [show, setShow] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name) setShow(true);
+  };
+
+  return (
+    <div style={{ textAlign: 'center', marginTop: '80px' }}>
+      <h2>Hello App</h2>
+      {show ? <h3>Hello, {name}!</h3> : (
+        <form onSubmit={handleSubmit}>
+          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter name" />
+          <br /><br />
+          <button type="submit">Greet</button>
+        </form>
+      )}
+    </div>
+  );
+}
+
+export default App;
+############################################################################################################
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+</head>
+<body>
+
+<h2>Contact Form</h2>
+
+<form id="myForm">
+  <input type="text" id="name" placeholder="Name" required><br><br>
+  <input type="email" id="email" placeholder="Email" required><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(e) {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (!name || !email) {
+      alert("Please fill in all fields.");
+      e.preventDefault();
+    } else {
+      alert("Form submitted!");
+    }
+  });
+</script>
+
+</body>
+</html>
+#############################################################################################################
